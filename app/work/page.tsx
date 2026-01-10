@@ -24,8 +24,7 @@ export default function WorkPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl text-accent-primary tracking-tight">work</h1>
-      <div className="flex items-center justify-between">
-        <div className="text-sm text-text-secondary">THINGS I HAVE BUILT, RESEARCHED, AND DONE</div>
+      <div className="flex items-center justify-end">
         <a href="/resume.pdf" className="text-sm border px-3 py-1.5 rounded text-text-secondary hover:text-accent-hover hover:border-accent-hover">↓ RESUME</a>
       </div>
       <WorkFilters value={tab} onChange={setTab} />
@@ -35,7 +34,15 @@ export default function WorkPage() {
           <section key={name} className="space-y-3">
             <h2 className="text-base text-text-secondary"><span className="text-accent-primary">•</span> {name}</h2>
             <AnimatePresence mode="popLayout">
-              <motion.div layout className="grid gap-3">
+              <motion.div
+                key={tab + '-' + name}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.22 }}
+                layout
+                className="grid gap-3"
+              >
                 {items.map((item, i) => (
                   <motion.div
                     key={item.title + i}

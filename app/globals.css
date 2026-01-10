@@ -24,11 +24,14 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: theme('fontFamily.mono');
-  text-transform: uppercase;
   font-size: 17px;
   line-height: 1.7;
   letter-spacing: 0.02em;
   cursor: none;
+}
+
+h1, h2, h3, nav a {
+  text-transform: uppercase;
 }
 
 * { border-color: var(--border); }

@@ -11,11 +11,13 @@ export default function AboutPage() {
           style={{ filter: 'saturate(0.9) contrast(1.1) hue-rotate(-8deg)' }}
         />
         <div className="space-y-4 text-sm text-text-secondary">
-          <p>I GREW UP IN FRANKLIN, TENNESSEE AND I AM NOW BASED IN BOSTON. I WAS THE KID TAKING APART TOYS TO SEE HOW THE GEARS MESSED WITH THE LIGHTS. A MICROSCOPE ARRIVED WHEN I WAS FIVE. BY TEN, I HAD A LAB POSITION AT LIPSCOMB UNIVERSITY. THE THEME NEVER CHANGED: BUILD A THING, WATCH IT TOUCH THE REAL WORLD, LEARN FROM THE FEEDBACK LOOP.</p>
-          <p>I AM TWENTY-ONE. I FOUNDED, OPERATED, AND EXITED A DRUG DISCOVERY AUTOMATION STARTUP: A LAB-IN-THE-LOOP SYSTEM WITH REAL‑TIME INFERENCE AND AN END‑TO‑END BIOINFORMATICS PIPELINE. THAT EXPERIENCE LOCKED IN WHAT I CARE ABOUT — PHYSICAL AI — SYSTEMS WHERE SOFTWARE ACTUALLY INTERACTS WITH, CONTROLS, AND LEARNS FROM HARDWARE.</p>
-          <p>AT NORTHEASTERN, I SELF‑DESIGNED A COMPUTATIONAL BIOPHYSICS MAJOR ACROSS COMPUTER SCIENCE, BIOCHEMISTRY, AND PHYSICS. I AM A STAMPS SCHOLAR WITH A BUNCH OF OTHER AWARDS, BUT MORE IMPORTANTLY I LIKE SHIPPING THINGS. MY RESEARCH TRACK RAN THROUGH HARVARD MEDICAL SCHOOL AND NORTHEASTERN ON VOLTAGE‑GATED ION CHANNELS, WHICH NATURALLY LED ME TO LAB AUTOMATION.</p>
-          <p>TODAY I WORK ON NEXT‑GEN AI PRODUCT AT LILA SCIENCES — BUILDING THE ORCHESTRATION LAYER FOR SCIENTIFIC SUPERINTELLIGENCE: THE SYSTEMS GLUE BETWEEN HARDWARE, ROBOTICS, AND PLATFORM.</p>
-          <p>I AM EXPLORING SUMMER AND FALL 2026 OPPORTUNITIES ACROSS PHYSICAL AI, EMBODIED SYSTEMS, LAB AUTOMATION, AND DEFENSE TECH. DMS OPEN.</p>
+          <p>I grew up in Franklin, Tennessee. I’m now based in Boston.</p>
+          <p>I got a microscope at five and had a lab position at Lipscomb University by ten. The throughline has always been the same: build something, watch it hit the real world, learn from the feedback loop.</p>
+          <p>That loop led me to self‑design my major at Northeastern—sitting at the intersection of computer science, biochemistry, and physics. I’m a full‑ride Stamps Scholar, with a dozen additional awards along the way.</p>
+          <p>I started in research at Harvard Medical School and Northeastern, modeling ion channels and running molecular dynamics simulations. That work led me to lab automation: I saw how much of science was bottlenecked by manual iteration, not ideas. So I built a drug discovery automation startup—a lab‑in‑the‑loop system with end‑to‑end bioinformatics and a real‑time inference pipeline. It got acquired. I was twenty.</p>
+          <p>In between: I scaled a consulting practice to six figures, built out the life sciences vertical at an AWS Premier Partner, and now run REV—Northeastern’s community of students who build cool things (an understatement: 5+ YC‑backed founders, $75M+ ARR across alumni).</p>
+          <p>Now I’m at Lila Sciences building the orchestration layer for scientific superintelligence: the systems glue between hardware, robotics, and platform. Physical AI—systems where software actually interacts with and learns from the real world—is what I care most about.</p>
+          <p>Always down to talk. Reach out.</p>
         </div>
       </div>
     </div>
