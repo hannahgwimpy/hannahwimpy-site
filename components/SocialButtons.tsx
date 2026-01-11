@@ -15,7 +15,7 @@ export default function SocialButtons() {
         <Link
           key={s.label}
           href={s.href}
-          className="text-xs border px-3 py-2 rounded-md text-text-secondary hover:text-accent-hover hover:border-accent-hover transition-colors"
+          className="text-xs border px-3 py-2 rounded-md text-text-secondary hover:text-accent-hover hover:border-accent-hover transition-colors uppercase"
         >
           {s.label}
         </Link>
