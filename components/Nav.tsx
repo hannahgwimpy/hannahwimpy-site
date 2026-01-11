@@ -12,10 +12,10 @@ export default function Nav() {
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/20">
       <div className="container mx-auto container-max px-4 py-4 flex items-center justify-center">
         <nav className="flex items-center gap-3 text-base uppercase">
-          <Link href="/" className={linkClass('/')} target="_blank" rel="noopener noreferrer">HANNAH WIMPY</Link>
-          <Link href="/about" className={linkClass('/about')} target="_blank" rel="noopener noreferrer">about</Link>
-          <Link href="/work" className={linkClass('/work')} target="_blank" rel="noopener noreferrer">work</Link>
-          <Link href="/blog" className={linkClass('/blog')} target="_blank" rel="noopener noreferrer">blog</Link>
+          <Link href="/" className={linkClass('/')}>HANNAH WIMPY</Link>
+          <Link href="/about" className={linkClass('/about')}>about</Link>
+          <Link href="/work" className={linkClass('/work')}>work</Link>
+          <Link href="/blog" className={linkClass('/blog')}>blog</Link>
         </nav>
       </div>
     </header>

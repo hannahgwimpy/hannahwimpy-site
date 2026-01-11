@@ -40,6 +40,13 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
       description: "Established the life sciences vertical with a 900+ prospect pipeline ($100k+ avg deals). Contributed to a client's $300M+ Series C through cloud transformation advisory.",
       tags: ['aws', 'biotech', 'sales'],
     },
+    {
+      title: 'Certified Pharmacy Technician & Immunizer @ CVS Pharmacy',
+      date: 'Aug 2022 – Jun 2025',
+      location: 'Franklin, TN',
+      description: 'Became the first minor employed at this location by driving policy and compliance changes. Filled prescriptions, administered vaccines, processed insurance claims, and provided multilingual patient support in a high‑volume healthcare setting.',
+      tags: ['healthcare', 'pharmacy', 'vaccines', 'operations'],
+    },
   ],
   research: [
     {
@@ -65,7 +72,7 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
       tags: ['ctbns', 'electrophysiology', 'python'],
     },
     {
-      title: 'SCN2A + PIP2 series',
+      title: 'SCN2A + PIP2 models for ASD and Epilepsy',
       date: '2024',
       description: 'Cohesive set of studies combining MD simulations, electrophysiology with PIP2 perturbation, and ML classification to investigate SCN2A/Nav1.2 dysfunction in ASD and epilepsy.',
       tags: ['gromacs', 'electrophysiology', 'ml', 'drug discovery'],
@@ -74,6 +81,12 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
       title: 'ADHD Diagnosis via Movement Data',
       date: '2024',
       description: 'Analyzed the HyperActiv dataset to objectively diagnose ADHD. Found significant movement pattern differences in males but not females.',
+      tags: ['ml', 'data analysis', 'healthcare'],
+    },
+    {
+      title: 'Cardiac Rehabilitation Volunteer Program',
+      date: '2022',
+      description: 'Created and implemented a pioneering volunteer program for minors to assist clinical physiologists in cardiac rehabilitation, including designing a complementary weightlifting program to support patients recovering from COVID-related cardiac events.',
       tags: ['ml', 'data analysis', 'healthcare'],
     },
     {

@@ -8,7 +8,7 @@ export default function FloatingElements() {
   const [mouse, setMouse] = React.useState({ x: 0, y: 0 })
   const [enabled, setEnabled] = React.useState(false)
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const isTouchEnv = (() => {
       if (typeof window === 'undefined') return false
       const mm = (q: string) => window.matchMedia && window.matchMedia(q).matches
@@ -17,7 +17,7 @@ export default function FloatingElements() {
       const touchPoints = (navigator as any).maxTouchPoints && (navigator as any).maxTouchPoints > 0
       const ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''
       const isiOS = /iPad|iPhone|iPod/.test(ua) || (ua.includes('Macintosh') && (navigator as any).maxTouchPoints > 1)
-      const smallViewport = window.innerWidth < 1024
+      const smallViewport = window.innerWidth < 1400
       const hasOntouch = 'ontouchstart' in window
       return coarse || noHover || touchPoints || hasOntouch || isiOS || smallViewport
     })()
