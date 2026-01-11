@@ -27,7 +27,10 @@ body {
   font-size: 17px;
   line-height: 1.7;
   letter-spacing: 0.02em;
-  cursor: none;
+}
+
+@media (pointer: fine) {
+  body { cursor: none; }
 }
 
 h1, h2, h3, nav a {
