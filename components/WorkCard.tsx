@@ -16,7 +16,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
       <div className="space-y-2">
         <div className="text-accent-primary uppercase">
           {item.link ? (
-            <Link href={item.link} target="_blank" className="hover:text-accent-hover">{item.title}</Link>
+            <Link href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-accent-hover">{item.title}</Link>
           ) : (
             item.title
           )}

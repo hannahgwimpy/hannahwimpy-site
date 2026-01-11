@@ -12,7 +12,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   const date = new Date(post.date)
   const pretty = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   return (
-    <Link href={`/blog/${post.slug}`} className="card rounded-md p-4 flex items-center justify-between hover:shadow-card">
+    <Link href={`/blog/${post.slug}`} className="card rounded-md p-4 flex items-center justify-between hover:shadow-card" target="_blank" rel="noopener noreferrer">
       <div>
         <div className="text-accent-primary hover:text-accent-hover">{post.title}</div>
         <div className="text-sm text-text-secondary">{post.description}</div>

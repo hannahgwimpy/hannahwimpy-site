@@ -42,7 +42,7 @@ export default function HomePage() {
       <div className="pt-2"><SocialButtons /></div>
 
       <div className="pt-2">
-        <Link href="/work" className="text-base link">WORK →</Link>
+        <Link href="/work" className="text-base link" target="_blank" rel="noopener noreferrer">WORK →</Link>
       </div>
     </div>
   )
