@@ -17,7 +17,7 @@ export default function AboutPage() {
           <p>I started in research at Harvard Medical School and Northeastern, modeling ion channels and running molecular dynamics simulations. That work led me to lab automation: I saw how much of science was bottlenecked by manual iteration, not ideas. So I built a drug discovery automation startup—a lab‑in‑the‑loop system with end‑to‑end bioinformatics and a real‑time inference pipeline. It got acquired.</p>
           <p>In between: I scaled a consulting practice to six figures, built out the life sciences vertical at an AWS Premier Partner, and now run rev—Northeastern’s community of students who build cool things (an understatement: 5+ YC‑backed founders, $75M+ ARR across alumni).</p>
           <p>Now I’m at Lila Sciences building the orchestration layer for scientific superintelligence: the systems glue between hardware, robotics, and platform. Physical AI—systems where software actually interacts with and learns from the real world—is what I care most about.</p>
-          <p>Always down to talk about physical AI and beyond. Reach out.</p>
+          <p>Always down to talk about physical AI and beyond. Reach out!</p>
         </div>
       </div>
     </div>

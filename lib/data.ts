@@ -1,5 +1,4 @@
-import type { BlogPost } from '@/components/BlogCard'
-import type { WorkItem } from '@/components/WorkCard'
+import type { BlogPost, WorkItem } from '@/lib/types'
 
 export const social = {
   twitter: 'https://x.com/hannahgwimpy',
