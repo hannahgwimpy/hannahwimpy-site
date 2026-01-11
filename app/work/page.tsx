@@ -32,7 +32,7 @@ export default function WorkPage() {
       <div className="space-y-8 pt-2">
         {sections.map(([name, items]) => (
           <section key={name} className="space-y-3">
-            <h2 className="text-base text-text-secondary"><span className="text-accent-primary">•</span> {name}</h2>
+            <h2 className="text-base text-text-secondary uppercase"><span className="text-accent-primary">•</span> {name}</h2>
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={tab + '-' + name}

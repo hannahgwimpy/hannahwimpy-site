@@ -9,10 +9,10 @@ import CursorDot from '@/components/CursorDot'
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
-  title: 'hannah wimpy',
+  title: 'HANNAH WIMPY',
   description: 'building physical ai. exited founder. comp. biophysics @ northeastern.',
   openGraph: {
-    title: 'hannah wimpy',
+    title: 'HANNAH WIMPY',
     description: 'building physical ai. exited founder. comp. biophysics @ northeastern.',
     images: ['/og.svg'],
   },

@@ -14,18 +14,26 @@ export default function WorkCard({ item }: { item: WorkItem }) {
   return (
     <div className="card rounded-md p-4 flex items-start justify-between gap-4 hover:shadow-card">
       <div className="space-y-2">
-        <div className="text-accent-primary capitalize">
+        <div className="text-accent-primary uppercase">
           {item.link ? (
             <Link href={item.link} target="_blank" className="hover:text-accent-hover">{item.title}</Link>
           ) : (
             item.title
           )}
         </div>
-        <div className="text-sm text-text-secondary">{item.date}{item.location ? ` · ${item.location}` : ''}</div>
+        {(() => {
+          const d = (item.date || '').trim()
+          const l = (item.location || '').trim()
+          const showD = !!d && d !== '-' && d !== '—'
+          const showL = !!l
+          if (!showD && !showL) return null
+          const text = [showD ? d : null, showL ? l : null].filter(Boolean).join(' · ')
+          return <div className="text-sm text-text-secondary capitalize">{text}</div>
+        })()}
         {item.description && <p className="text-sm text-text-secondary/90 max-w-[70ch]">{item.description}</p>}
         <div className="flex flex-wrap gap-2 pt-2">
           {item.tags?.map((t) => (
-            <span key={t} className="text-[13px] px-2.5 py-1 rounded border bg-[var(--tag-bg)] border-[var(--tag-border)] text-text-secondary">{t}</span>
+            <span key={t} className="text-[13px] px-2.5 py-1 rounded border bg-[var(--tag-bg)] border-[var(--tag-border)] text-text-secondary uppercase">{t}</span>
           ))}
         </div>
       </div>
