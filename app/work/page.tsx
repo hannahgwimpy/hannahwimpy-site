@@ -16,9 +16,13 @@ export default function WorkPage() {
     return Math.max(...matches.map((m) => parseInt(m, 10)))
   }
 
-  const sections = useMemo(() => {
-    const entries = tab === 'all' ? (Object.entries(workData) as [string, WorkItem[]][]) : [[tab, workData[tab as keyof typeof workData]]]
-    return entries.map(([name, items]) => [name, [...items].sort((a, b) => normalizeYear(b.date) - normalizeYear(a.date))] as [string, WorkItem[]])
+  type SectionKey = keyof typeof workData
+  const sections = useMemo<[SectionKey, WorkItem[]][]>(() => {
+    const entries: [SectionKey, WorkItem[]][] =
+      tab === 'all'
+        ? (Object.entries(workData) as [SectionKey, WorkItem[]][])
+        : [[tab as SectionKey, workData[tab as SectionKey]]]
+    return entries.map(([name, items]) => [name, [...items].sort((a, b) => normalizeYear(b.date) - normalizeYear(a.date))])
   }, [tab])
 
   return (
@@ -30,12 +34,14 @@ export default function WorkPage() {
       <WorkFilters value={tab} onChange={setTab} />
 
       <div className="space-y-8 pt-2">
-        {sections.map(([name, items]) => (
-          <section key={name} className="space-y-3">
-            <h2 className="text-base text-text-secondary uppercase"><span className="text-accent-primary">•</span> {name}</h2>
+        {sections.map(([name, items]) => {
+          const nameStr = String(name)
+          return (
+          <section key={nameStr} className="space-y-3">
+            <h2 className="text-base text-text-secondary uppercase"><span className="text-accent-primary">•</span> {nameStr}</h2>
             <AnimatePresence mode="popLayout">
               <motion.div
-                key={tab + '-' + name}
+                key={`${tab}-${nameStr}`}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
@@ -58,7 +64,8 @@ export default function WorkPage() {
               </motion.div>
             </AnimatePresence>
           </section>
-        ))}
+          )
+        })}
       </div>
     </div>
   )
