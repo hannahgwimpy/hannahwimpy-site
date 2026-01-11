@@ -4,6 +4,7 @@ import { JetBrains_Mono } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import dynamic from 'next/dynamic'
+import { Analytics } from '@vercel/analytics/next'
 const FloatingElements = dynamic(() => import('@/components/FloatingElements'), { ssr: false })
 const CursorDot = dynamic(() => import('@/components/CursorDot'), { ssr: false })
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
