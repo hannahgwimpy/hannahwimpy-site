@@ -6,22 +6,31 @@ import * as React from 'react'
 export default function FloatingElements() {
   const ref = React.useRef<HTMLDivElement>(null)
   const [mouse, setMouse] = React.useState({ x: 0, y: 0 })
+  const [enabled, setEnabled] = React.useState(false)
 
   React.useEffect(() => {
+    const isFine = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: fine)').matches
+    setEnabled(!!isFine)
+  }, [])
+
+  React.useEffect(() => {
+    if (!enabled) return
     const onMove = (e: MouseEvent) => {
       const { innerWidth, innerHeight } = window
       const x = (e.clientX - innerWidth / 2) / innerWidth
       const y = (e.clientY - innerHeight / 2) / innerHeight
       setMouse({ x, y })
     }
-    window.addEventListener('mousemove', onMove)
+    window.addEventListener('mousemove', onMove, { passive: true })
     return () => window.removeEventListener('mousemove', onMove)
-  }, [])
+  }, [enabled])
 
   const parallax = (mult = 1) => ({
     transform: `translate3d(${mouse.x * 40 * mult}px, ${mouse.y * 40 * mult}px, 0)`,
     transition: 'transform 120ms linear',
   })
+
+  if (!enabled) return null
 
   return (
     <div ref={ref} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">

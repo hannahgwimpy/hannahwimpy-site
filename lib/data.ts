@@ -127,12 +127,4 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
   ],
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: 'hello-world',
-    title: 'Hello World',
-    description: 'First post on the new site',
-    date: '2026-01-01',
-    tags: ['intro'],
-  },
-]
+export const blogPosts: BlogPost[] = []
