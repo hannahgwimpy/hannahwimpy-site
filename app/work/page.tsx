@@ -29,7 +29,7 @@ export default function WorkPage() {
     <div className="space-y-6">
       <h1 className="text-3xl text-accent-primary tracking-tight">work</h1>
       <div className="flex items-center justify-end">
-        <a href="/resume.pdf" className="text-sm border px-3 py-1.5 rounded text-text-secondary hover:text-accent-hover hover:border-accent-hover">↓ RESUME</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-sm border px-3 py-1.5 rounded text-text-secondary hover:text-accent-hover hover:border-accent-hover">↓ RESUME</a>
       </div>
       <WorkFilters value={tab} onChange={setTab} />
 

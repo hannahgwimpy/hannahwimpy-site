@@ -62,6 +62,16 @@ h1, h2, h3, nav a {
   border: 1px solid var(--border);
 }
 
+/* Disable floating/parallax layers on touch devices as a final safety */
+@media (hover: none), (pointer: coarse) {
+  .hide-on-touch { display: none !important; }
+}
+
+/* Additional iOS WebKit fallback */
+@supports (-webkit-touch-callout: none) {
+  .hide-on-touch { display: none !important; }
+}
+
 input, button {
   outline: none;
 }

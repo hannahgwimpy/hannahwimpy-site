@@ -15,9 +15,11 @@ export default function CursorDot() {
   const sScale = useSpring(scale, { stiffness: 300, damping: 30 })
 
   React.useEffect(() => {
-    // Enable only on devices with a fine pointer (desktop/mice)
+    // Enable only on devices with a fine pointer and not iOS/iPadOS
     const isFine = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: fine)').matches
-    setEnabled(!!isFine)
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (ua.includes('Macintosh') && (navigator as any).maxTouchPoints > 1)
+    setEnabled(!!isFine && !isIOS)
   }, [])
 
   React.useEffect(() => {

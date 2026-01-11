@@ -11,15 +11,15 @@ export default function AboutPage() {
           style={{ filter: 'saturate(0.9) contrast(1.1) hue-rotate(-8deg)' }}
         />
         <div className="space-y-4 text-sm text-text-secondary">
-          <p>I grew up in Franklin, Tennessee. I’m now based in Boston.</p>
-          <p>I got a microscope at five and had a lab position at Lipscomb University by ten. The throughline has always been the same: build something, watch it hit the real world, learn from the feedback loop.</p>
-          <p>That loop led me to self‑design my major at Northeastern—sitting at the intersection of computer science, biochemistry, and physics. I’m a full‑ride Stamps Scholar, with a dozen additional awards along the way.</p>
-          <p>I started in research at Harvard Medical School and Northeastern, modeling ion channels and running molecular dynamics simulations. That work led me to lab automation: I saw how much of science was bottlenecked by manual iteration, not ideas. So I built a drug discovery automation startup—a lab‑in‑the‑loop system with end‑to‑end bioinformatics and a real‑time inference pipeline. It got acquired!</p>
-          <p>In between: I scaled a consulting practice to six figures, built out the life sciences vertical at an AWS Premier Partner, and now run rev—Northeastern’s community of students who build cool things (an understatement: 5+ YC‑backed founders, $75M+ ARR across alumni).</p>
-          <p>Now I’m at Lila Sciences building the orchestration layer for scientific superintelligence: the systems glue between hardware, robotics, and platform.</p>
+          <p>Grew up in Franklin, TN. Now based in Boston, MA.</p>
+          <p>Got a microscope at five. Had a lab position at Lipscomb by ten. The throughline has always been the same: build something, watch it hit the real world, learn from the feedback loop.</p>
+          <p>That loop led me to self-design my major at Northeastern—CS, biochemistry, and physics mashed together. Full-ride Stamps Scholar, plus a dozen other awards.</p>
+          <p>Started in research at Harvard Med and Northeastern: ion channels, molecular dynamics simulations. Then I noticed how much of science was bottlenecked by manual iteration, not ideas. So I built a drug discovery automation startup—lab-in-the-loop, end-to-end bioinformatics, real-time inference. It got acquired!</p>
+          <p>Somewhere in there: scaled a consulting practice to six figures, built the life sciences vertical at an AWS Premier Partner, and started running rev—Northeastern's builder community (5+ YC-backed founders, $75M+ ARR across alumni).</p>
+          <p>Now I'm at Lila Sciences building the orchestration layer for scientific superintelligence—the systems glue between hardware, robotics, and platform.</p>
           <p>My goal is continuing to build in physical AI—systems where software actually interacts with and learns from the real world. I lean towards techbio, but I'm starting venture beyond.</p>
-          <p>I am also a Paris Texas, Odd Future, Patrick Ness, Matisse, and Toulouse-Lautrec fan.</p>
-          <p>Always down to talk about physical AI and more. Reach out!</p>
+          <p>Also into: Paris Texas, Odd Future, Patrick Ness, Matisse, Toulouse-Lautrec, UTK Vols, Dallas Cowboys.</p>
+          <p>Always down to talk. Reach out.</p>
         </div>
       </div>
     </div>

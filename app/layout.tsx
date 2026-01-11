@@ -3,8 +3,9 @@ import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import FloatingElements from '@/components/FloatingElements'
-import CursorDot from '@/components/CursorDot'
+import dynamic from 'next/dynamic'
+const FloatingElements = dynamic(() => import('@/components/FloatingElements'), { ssr: false })
+const CursorDot = dynamic(() => import('@/components/CursorDot'), { ssr: false })
 
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 

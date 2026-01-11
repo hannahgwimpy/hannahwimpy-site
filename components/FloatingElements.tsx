@@ -9,8 +9,19 @@ export default function FloatingElements() {
   const [enabled, setEnabled] = React.useState(false)
 
   React.useEffect(() => {
-    const isFine = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: fine)').matches
-    setEnabled(!!isFine)
+    const isTouchEnv = (() => {
+      if (typeof window === 'undefined') return false
+      const mm = (q: string) => window.matchMedia && window.matchMedia(q).matches
+      const coarse = mm('(pointer: coarse)')
+      const noHover = mm('(hover: none)')
+      const touchPoints = (navigator as any).maxTouchPoints && (navigator as any).maxTouchPoints > 0
+      const ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''
+      const isiOS = /iPad|iPhone|iPod/.test(ua) || (ua.includes('Macintosh') && (navigator as any).maxTouchPoints > 1)
+      const smallViewport = window.innerWidth < 1024
+      const hasOntouch = 'ontouchstart' in window
+      return coarse || noHover || touchPoints || hasOntouch || isiOS || smallViewport
+    })()
+    setEnabled(!isTouchEnv)
   }, [])
 
   React.useEffect(() => {
@@ -33,7 +44,7 @@ export default function FloatingElements() {
   if (!enabled) return null
 
   return (
-    <div ref={ref} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div ref={ref} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden hide-on-touch">
       {/* large soft blobs */}
       <motion.div
         className="absolute w-40 h-40 rounded-full"
