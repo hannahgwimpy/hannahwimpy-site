@@ -14,7 +14,7 @@ export default function WorkFilters({ value, onChange }: { value: Tab; onChange:
           <button
             key={t}
             onClick={() => onChange(t)}
-            className={`relative z-10 text-sm px-3 py-1 rounded transition-colors ${
+            className={`relative z-10 text-sm px-3 py-1 rounded transition-colors uppercase ${
               active ? 'text-accent-primary' : 'text-text-secondary hover:text-accent-hover'
             }`}
           >

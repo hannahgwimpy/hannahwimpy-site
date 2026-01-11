@@ -14,7 +14,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
   return (
     <div className="card rounded-md p-4 flex items-start justify-between gap-4 hover:shadow-card">
       <div className="space-y-2">
-        <div className="text-accent-primary">
+        <div className="text-accent-primary capitalize">
           {item.link ? (
             <Link href={item.link} target="_blank" className="hover:text-accent-hover">{item.title}</Link>
           ) : (
