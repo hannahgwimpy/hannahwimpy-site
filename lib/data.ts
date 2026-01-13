@@ -31,7 +31,6 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
       location: 'Cambridge, MA',
       description: 'Building the orchestration layer between robotics and platform to enable autonomous science.',
       tags: ['physical ai', 'robotics', 'ml'],
-      link: 'https://lila.science',
     },
     {
       title: 'Life Sciences Lead Consultant @ Cloud303',
