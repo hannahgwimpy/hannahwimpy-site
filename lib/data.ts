@@ -26,10 +26,10 @@ export const workData: Record<'founding'|'operating'|'research'|'projects'|'lead
   ],
   operating: [
     {
-      title: 'Next-Gen AI Product Co-op @ Lila Sciences',
+      title: 'Next Generation Product Co-op @ Lila Sciences',
       date: 'Jan 2026 – Present',
       location: 'Cambridge, MA',
-      description: 'Building the orchestration layer for scientific superintelligence. Closed-loop systems: AI designs experiments, robots run them, the system learns from results.',
+      description: 'Building the orchestration layer between robotics and platform to enable autonomous science.',
       tags: ['physical ai', 'robotics', 'ml'],
       link: 'https://lila.science',
     },
